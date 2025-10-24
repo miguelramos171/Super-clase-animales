@@ -41,3 +41,68 @@ class Animal:
 
     def moverse(self):
         print(f"{self.nombre} empezó a {self.tipo_movimiento} a toda velocidad!!")
+```
+
+### 🐕 Clase `Perro`
+
+La clase `Perro` hereda de `Animal` y define comportamientos propios de un perro.
+
+**Métodos sobrescritos:**
+- `__init__`: llama a `super()` con `tipo_movimiento="correr"`.
+- `hablar()`: imprime un ladrido.
+- `jugar()`: indica que el perro corre tras una pelota.
+
+```python
+class Perro(Animal):
+    def __init__(self, nombre):
+        super().__init__(nombre, tipo_movimiento="correr")
+
+    def hablar(self):
+        print(f"\n{self.nombre} dice Guauu!!!")
+
+    def jugar(self):
+        print(f"{self.nombre} está corriendo tras una pelota")
+```
+
+
+### 🐈 Clase `Gato`
+
+La clase `Gato` hereda de `Animal` y redefine los comportamientos propios de un gato.
+
+**Métodos sobrescritos:**
+- `__init__`: llama a `super()` con `tipo_movimiento="correr"`.
+- `hablar()`: imprime “Miau miau”.
+- `jugar()`: indica que el gato corre tras un ratón de juguete.
+
+```python
+class Gato(Animal):
+    def __init__(self, nombre):
+        super().__init__(nombre, tipo_movimiento="correr")
+
+    def hablar(self):
+        print(f"{self.nombre} dice: ¡Miau miau!")
+
+    def jugar(self):
+        print(f"{self.nombre} está corriendo tras un ratón de juguete")
+```
+
+
+### 🐠 Clase `Pez`
+
+La clase `Pez` hereda de `Animal` pero su tipo de movimiento es distinto (`nadar`).
+
+**Métodos sobrescritos:**
+- `__init__`: llama a `super()` con `tipo_movimiento="nadar"`.
+- `hablar()`: simula sonido con burbujas.
+- `jugar()`: indica que el pez persigue un renacuajo.
+
+```python
+class Pez(Animal):
+    def __init__(self, nombre):
+        super().__init__(nombre, tipo_movimiento="nadar")
+
+    def hablar(self):
+        print(f"{self.nombre} empezó a liberar burbujas como sonido")
+
+    def jugar(self):
+        print(f"{self.nombre} está persiguiendo un renacuajo")
