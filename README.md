@@ -2,6 +2,8 @@
 
 Este proyecto en **Python** demuestra el uso de **herencia y polimorfismo** en la **Programación Orientada a Objetos (POO)** mediante una superclase llamada `Animal` y varias subclases (`Perro`, `Gato`, `Pez`) que heredan de ella.  
 
+El código ahora está **modularizado**, es decir, **cada clase se encuentra en un archivo separado**, lo cual mejora la organización, el mantenimiento y la reutilización del código.  
+
 ---
 
 ## 🧠 Descripción del programa  
@@ -10,14 +12,32 @@ El programa modela distintos tipos de animales mostrando cómo comparten comport
 
 El código permite:  
 - Definir una **superclase `Animal`** con atributos y métodos comunes.  
-- Crear **subclases específicas** que heredan y redefinen comportamientos.  
+- Crear **subclases específicas** (`Perro`, `Gato`, `Pez`) que heredan y redefinen comportamientos.  
 - Ejecutar acciones con varios animales para demostrar el **polimorfismo**.  
+- Mantener una **estructura modular**: cada clase está en su propio archivo `.py`.  
 
 ---
 
-## 🧩 Estructura del código  
+## 🧩 Estructura del proyecto  
+📂 Superclase_Animales/
+│
 
-### 🦴 Clase `Animal`
+├── animal.py # Define la clase base Animal
+
+├── perro.py # Define la subclase Perro
+
+├── gato.py # Define la subclase Gato
+
+├── pez.py # Define la subclase Pez
+
+└── main.py # Contiene la función principal del programa
+
+
+
+
+---
+
+## 🦴 Clase `Animal` (`animal.py`)
 
 La clase `Animal` actúa como **superclase**.  
 Define los atributos y métodos comunes a todos los animales.  
@@ -41,6 +61,7 @@ class Animal:
 
     def moverse(self):
         print(f"{self.nombre} empezó a {self.tipo_movimiento} a toda velocidad!!")
+
 ```
 
 ### 🐕 Clase `Perro`
@@ -53,6 +74,8 @@ La clase `Perro` hereda de `Animal` y define comportamientos propios de un perro
 - `jugar()`: indica que el perro corre tras una pelota.
 
 ```python
+from animal import Animal
+
 class Perro(Animal):
     def __init__(self, nombre):
         super().__init__(nombre, tipo_movimiento="correr")
@@ -75,6 +98,8 @@ La clase `Gato` hereda de `Animal` y redefine los comportamientos propios de un 
 - `jugar()`: indica que el gato corre tras un ratón de juguete.
 
 ```python
+from animal import Animal
+
 class Gato(Animal):
     def __init__(self, nombre):
         super().__init__(nombre, tipo_movimiento="correr")
@@ -97,6 +122,8 @@ La clase `Pez` hereda de `Animal` pero su tipo de movimiento es distinto (`nadar
 - `jugar()`: indica que el pez persigue un renacuajo.
 
 ```python
+from animal import Animal
+
 class Pez(Animal):
     def __init__(self, nombre):
         super().__init__(nombre, tipo_movimiento="nadar")
@@ -119,6 +146,11 @@ El bloque `main()` crea instancias de las subclases, muestra ejemplos de reasign
 3. Recorrer la lista y llamar a `hablar()`, `moverse()` y `jugar()` en cada objeto para evidenciar polimorfismo.
 
 ```python
+# main.py
+from perro import Perro
+from gato import Gato
+from pez import Pez
+
 def main():
     # 1) Lista principal de animales
     animales = [Perro("Mateo"), Gato("Michi"), Pez("Pipe")]
@@ -138,6 +170,10 @@ def main():
 
 if __name__ == "__main__":
     main()
+
 ```
 
 
+## 🖥️ 5. Ejemplo de salida en consola
+
+![alt text](image.png)
