@@ -106,3 +106,38 @@ class Pez(Animal):
 
     def jugar(self):
         print(f"{self.nombre} está persiguiendo un renacuajo")
+```
+
+
+## ⚙️ 4. Ejecución del programa (`main`)
+
+El bloque `main()` crea instancias de las subclases, muestra ejemplos de reasignación de variables a distintos tipos y recorre una lista de animales para ejecutar comportamientos polimórficos.
+
+**Pasos principales:**
+1. Crear la lista principal de animales: `Perro("Mateo")`, `Gato("Michi")`, `Pez("Pipe")`.
+2. Mostrar llamadas directas a métodos mediante reasignación (ej.: usar la variable `hamster` como `Perro` y luego como `Gato`).
+3. Recorrer la lista y llamar a `hablar()`, `moverse()` y `jugar()` en cada objeto para evidenciar polimorfismo.
+
+```python
+def main():
+    # 1) Lista principal de animales
+    animales = [Perro("Mateo"), Gato("Michi"), Pez("Pipe")]
+    
+    # 2) Ejemplos adicionales: reasignación de la variable 'hamster' a distintos tipos
+    hamster = Perro("pepo")
+    hamster.jugar()           # Perro.jugar()
+    hamster = Gato("pepo")
+    hamster.jugar()           # Gato.jugar()
+
+    # 3) Demostración polimórfica: cada animal responde a los mismos métodos de forma diferente
+    for animal in animales:
+        animal.hablar()
+        animal.moverse()
+        animal.jugar()
+        print()
+
+if __name__ == "__main__":
+    main()
+```
+
+
