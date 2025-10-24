@@ -177,3 +177,21 @@ if __name__ == "__main__":
 ## 🖥️ 5. Ejemplo de salida en consola
 
 ![alt text](image.png)
+
+## 🧩 Conceptos de POO aplicados
+
+| Concepto               | ¿Cómo se aplica en este proyecto?                                                                 |
+|------------------------|---------------------------------------------------------------------------------------------------|
+| **Herencia**           | `Perro`, `Gato` y `Pez` extienden la superclase `Animal`, heredando atributos y métodos comunes.  |
+| **Polimorfismo**       | Llamadas idénticas (`hablar()`, `moverse()`, `jugar()`) producen comportamientos distintos según la subclase. |
+| **Encapsulamiento**    | Los atributos (`nombre`, `tipo_movimiento`) se gestionan dentro de cada objeto y no se exponen globalmente. |
+| **Responsabilidad única** | `Animal` define la interfaz y comportamientos generales; cada subclase implementa detalles concretos (hablar, jugar). |
+| **Modularidad**        | Cada clase está en su archivo (`animal.py`, `perro.py`, `gato.py`, `pez.py`), mejorando organización y mantenimiento. |
+
+---
+
+## 👨‍💻 Autor
+
+- **Miguel Ángel Ramos Sandoval**  
+
+---
