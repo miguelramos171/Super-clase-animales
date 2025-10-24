@@ -19,21 +19,7 @@ El código permite:
 ---
 
 ## 🧩 Estructura del proyecto  
-📂 Superclase_Animales/
-│
-
-├── animal.py # Define la clase base Animal
-
-├── perro.py # Define la subclase Perro
-
-├── gato.py # Define la subclase Gato
-
-├── pez.py # Define la subclase Pez
-
-└── main.py # Contiene la función principal del programa
-
-
-
+![alt text](image.png)
 
 ---
 
@@ -176,7 +162,7 @@ if __name__ == "__main__":
 
 ## 🖥️ 5. Ejemplo de salida en consola
 
-![alt text](image.png)
+![alt text](image-1.png)
 
 ## 🧩 Conceptos de POO aplicados
 
